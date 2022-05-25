@@ -1,6 +1,6 @@
 // Import the React and ReactDom libraries
 import React from "react";
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
 
 // Create a react component
 const App = () => {
@@ -16,4 +16,9 @@ const App = () => {
 };
 
 // Take the react component and show it on the screen
-ReactDOM.render(<App />, document.getElementById("root"));
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
+    <React.StrictMode>
+        <App />
+    </React.StrictMode>
+);
